@@ -29,7 +29,9 @@ const copiarContenido = async () => {
 }
 
 const btncopy = btn_copy.addEventListener('click', () => {
+  document.querySelector('#modalcopysucces').addEventListener('click',()=>{
+    handlerClick('#close')
+  })
   copiarContenido();
-})
 
-export default btncopy;
+})

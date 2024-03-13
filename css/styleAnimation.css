@@ -50,24 +50,27 @@
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
-  pointer-events: true;
+  pointer-events: none;
 }
-.modalmask:targetm,
-.modalNoText {
+.modalmask:target {
   opacity: 1;
   pointer-events: auto;
 }
 
 /*Formato de la ventana*/
 .modalbox {
+  display: flex;
   width: 400px;
   position: relative;
   padding: 5px 20px 13px 20px;
   background: #fff;
   border-radius: 3px;
-  -webkit-transition: all 500ms ease-in;
-  -moz-transition: all 500ms ease-in;
-  transition: all 500ms ease-in;
+  -webkit-transition: all 400ms ease-in;
+  -moz-transition: all 400ms ease-in;
+  transition: all 400ms ease-in;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Movimientos*/
@@ -94,7 +97,7 @@
 
 .modalmask:target .resize {
   width: 400px;
-  height: 200px;
+  height: 70px;
 }
 
 /*Boton de cerrar*/
