@@ -6,13 +6,17 @@
 
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    if()
+    if (!form.children.namedItem("message").value) {
+      handlerModal();
+      return;
+    }
+
     let sms = link + form.children.namedItem("message").value;
 
     sms = sms.replace(/ /g, "%20");
 
     linkClick(sms);
-    sms = ''
+    sms = "";
   });
 
   function linkClick(Url) {
@@ -21,5 +25,16 @@
     document.body.appendChild(a);
     window.open(Url, "_blank");
     document.body.removeChild(a);
+  }
+  function handlerModal() {
+    const textareaNoText = document.querySelector("#textareaNoText");
+
+    textareaNoText.addEventListener('modalNoText')
+
+    textareaNoText.addEventListener("click", () => {
+      textareaNoText.classList.remove("modalNoText");
+
+      textareaNoText.removeEventListener("click", () => {});
+    });
   }
 })();
