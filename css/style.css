@@ -257,6 +257,9 @@ a {
     transition-duration: 400ms;
     transition-property: box-shadow transform;
 }
+.products-services__preview:hover{
+    cursor: pointer;
+}
 
 .products-services__preview:nth-child(1) {
     background-image: linear-gradient(180deg, #2e2d2d8c 0%, #4d4a4a8c 100%), url('../img/img-products-services/1.jpeg');
@@ -387,7 +390,13 @@ a {
     height: 100%;
 }
 
-
+.contact-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.3em;
+}
 /* Form */
 .form {
     display: flex;
@@ -423,6 +432,7 @@ input[type="submit"] {
     resize: none;
     height: 130px;
     width: 250px;
+    border-radius: 15px;
 }
 
 /* Footer */

@@ -1,5 +1,5 @@
     const form = document.querySelector("#form-main");
-    let link = "https://api.whatsapp.com/send?phone=+573145494395&text=";
+    const linkWhatsapp = "https://api.whatsapp.com/send?phone=+573145494395&text=";
 
     const btn = document.querySelector("#btn-submit");
 
@@ -10,7 +10,7 @@
             return;
         }
 
-        let sms = link + form.children.namedItem("message").value;
+        let sms = linkWhatsapp + form.children.namedItem("message").value;
 
         sms = sms.replace(/ /g, "%20");
 
@@ -34,11 +34,15 @@
         document.body.removeChild(a);
     }
     
-    function handlerModal() {
-        const textareaNoText = document.querySelector('#textareaNoText');
-        handlerClick("#textareaNoText");
+    function handlerModal(...t) {
+        const textareaNoText = document.querySelector('#modalEffect');
+        handlerClick("#modalEffect");
 
         textareaNoText.addEventListener("click", () => {
             handlerClick("#close");
+            textareaNoText.removeEventListener("click",()=>{
+
+            })
         })
+
     }
