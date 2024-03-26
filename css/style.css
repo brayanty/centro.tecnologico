@@ -33,7 +33,7 @@ body {
     padding-bottom: 4em;
 }
 .container {
-    width: 90%;
+    width: 96%;
     max-width: 1200px;
     margin: 0 auto;
 
@@ -112,9 +112,6 @@ a {
     height: 45px;
     filter: invert(100%);
 }
-
-
-
 
 /* Navigation Links */
 .nav__link-contain {
@@ -230,6 +227,7 @@ a {
     justify-content: center;
     flex-direction: column;
     gap: 3em;
+    width: 100%;
 }
 
 
