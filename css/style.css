@@ -117,14 +117,13 @@ a {
 .nav__link-contain {
     position: absolute;
     background-color: var(--color-nav);
-    width: 60vh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     top: -1800px;
     right: 0;
     transition: top 400ms;
     border-color: #f3f4f5;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-radius: 15px;
 }
 
 .nav__link-contain-active {
@@ -141,11 +140,20 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 4em;
+    gap: 1.5em;
 }
 
 .nav__items {
     color: var(--color5);
+}
+
+.nav__items-separate {
+    border-bottom: 1px solid #9B9A9A;
+    float: bottom;
+    list-style: none  none outside;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80%;
 }
 
 .nav__link {
@@ -155,10 +163,6 @@ a {
     transition: border-bottom 600ms;
     height: 100%;
     width: 100%;
-}
-
-.nav .nav__link:hover {
-    border-bottom: 1px solid white;
 }
 
 /* Hero Section */
@@ -433,6 +437,33 @@ input[type="submit"] {
     border-radius: 15px;
 }
 
+/* ToWhatsapp*/
+.toWhatsapp{
+    height: 15px;
+    width: 40px;
+    padding: 1.2em;
+    border-radius: 5px;
+
+    position: fixed;
+    bottom: 2em;
+    right: .9em;
+    background-color: #1a1a1a;
+    box-shadow: -10px 3px 79px -7px rgb(201, 201, 201);
+    -webkit-box-shadow: -10px 3px 79px -7px rgb(230, 230, 230);
+    -moz-box-shadow: -10px 3px 79px -7px rgb(196, 196, 196);
+}
+
+.toWhatsapp-link{
+    color: #00ff4c;
+    height: 3em;
+    width: 3em;
+}
+
+.toWhatsapp-link i{
+    font-size: 3em;
+    
+}
+
 /* Footer */
 .footer {
     height: 30vh;
@@ -546,7 +577,14 @@ input[type="submit"] {
         text-align: center;
         font-size: 30px;
     }
-
+    .nav__items-separate {
+        border-bottom: unset;
+        float: unset;
+        list-style: none;
+        padding-left: 0;
+        padding-right: 0;
+        width: 0;
+    }
     /* Project Container */
     .products-services__contain {
         grid-auto-rows: minmax(200px, 250px);
