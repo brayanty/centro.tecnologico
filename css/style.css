@@ -399,6 +399,10 @@ a {
     flex-direction: column;
     gap: 1.3em;
 }
+.contact-link:hover{
+    color: #000000;
+    text-shadow: #000000 -4px 1px 6px;
+}
 /* Form */
 .form {
     display: flex;
